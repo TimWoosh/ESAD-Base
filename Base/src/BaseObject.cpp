@@ -17,8 +17,8 @@ bool BaseObject::debugging_ = false;
 BaseObject::BaseObject()
 	: name_(""),
 	  xnot_(3),
-	  ID_(seqID++),
-	  defConstr(true)
+	  defConstr(true),
+	  ID_(seqID++)
 {
 	if(debugging_)
 		cout << __PRETTY_FUNCTION__ << endl;

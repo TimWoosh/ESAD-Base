@@ -29,7 +29,7 @@ int main() {
 
 	BaseObject bo2("Henkie");
 	BaseObject bo3("Henkie");
-	BaseObject bo4();
+	BaseObject bo4;
 
 	return 0;
 }
