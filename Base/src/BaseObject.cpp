@@ -123,10 +123,10 @@ BaseObject& BaseObject::operator =(const BaseObject& aBO)
 
 std::ostream& operator<<(std::ostream& os, const BaseObject& aBaseObject)
 {
-	cout << __PRETTY_FUNCTION__ << endl;
-//  os << aBaseObject.name_ << " met ID " << aBaseObject.ID_;
-  os << aBaseObject.getName() << " met ID " << aBaseObject.getID();
-  return os;
+	os << "BaseObject:" << endl;
+	os << "  Name: " << (aBaseObject.name_.length() ? aBaseObject.name_ : "nameless") << endl;
+	os << aBaseObject.getName() << "  ID: " << aBaseObject.getID() << endl;
+	return os;
 }
 
 

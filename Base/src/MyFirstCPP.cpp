@@ -15,7 +15,7 @@ using namespace std;
 int main() {
 
 	cout << __PRETTY_FUNCTION__ << endl;
-	BaseObject::setDebugging(true);
+	BaseObject::setDebugging(false);
 
 	cout << "debugging mode";
 	if(BaseObject::isDebugOn())
@@ -30,6 +30,8 @@ int main() {
 	BaseObject bo2("Henkie");
 	BaseObject bo3("Henkie");
 	BaseObject bo4;
+
+	cout << bo4;
 
 	return 0;
 }
