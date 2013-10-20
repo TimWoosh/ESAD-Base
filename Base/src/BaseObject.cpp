@@ -15,8 +15,9 @@ int BaseObject::seqID = 100000;
 bool BaseObject::debugging_ = false;
 
 BaseObject::BaseObject()
-	: ID_(seqID++),
+	: name_(""),
 	  xnot_(3),
+	  ID_(seqID++),
 	  defConstr(true)
 {
 	if(debugging_)
@@ -47,7 +48,13 @@ BaseObject::~BaseObject()
 {
 	if(debugging_)
 		cout << __PRETTY_FUNCTION__ << endl;
-	cout << "Destructing " << name_ << endl;
+
+	string displayName;
+	if(name_.length() != 0)
+		displayName = name_;
+	else
+		displayName = "nameless";
+	cout << "Destructing BaseObject " << displayName << " with ID: " << ID_ << endl;
 }
 
 void BaseObject::setName(string name)

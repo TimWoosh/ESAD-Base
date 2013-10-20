@@ -73,8 +73,10 @@ class BaseObject {
 		int xnot_;
 		bool defConstr;
 		int ID_;
+
 		static int seqID;
 		static bool debugging_;
+
 		friend std::ostream& operator<<(std::ostream& os, const BaseObject& aBaseObject);
 };
 

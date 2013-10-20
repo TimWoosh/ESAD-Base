@@ -24,16 +24,12 @@ int main() {
 		cout << " off";
 	cout << endl;
 
-	BaseObject bo("Wim");
-	BaseObject boA("Dirk");
-	BaseObject boo("");
+	BaseObject bo = BaseObject();
+	bo.setName("Berbl");
 
-	boo = boA;
-
-
-	cout << "bo is: " << bo << "Tof he! " << endl;
-	cout << "boA is: " << boA << "Tof he! " << endl;
-	cout << "boo is: " << boo << "Tof he! " << endl;
+	BaseObject bo2("Henkie");
+	BaseObject bo3("Henkie");
+	BaseObject bo4();
 
 	return 0;
 }
